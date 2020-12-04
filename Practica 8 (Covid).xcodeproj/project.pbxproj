@@ -17,6 +17,7 @@
 		BFD1AC102579C25300A923FB /* CovidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1AC0F2579C25300A923FB /* CovidManager.swift */; };
 		BFD1AC132579C27A00A923FB /* CovidModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1AC122579C27A00A923FB /* CovidModelo.swift */; };
 		BFD1AC162579C28B00A923FB /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1AC152579C28B00A923FB /* CovidData.swift */; };
+		BFD1AC1C2579F3EB00A923FB /* Top5Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1AC1B2579F3EB00A923FB /* Top5Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BFD1AC0F2579C25300A923FB /* CovidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidManager.swift; sourceTree = "<group>"; };
 		BFD1AC122579C27A00A923FB /* CovidModelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModelo.swift; sourceTree = "<group>"; };
 		BFD1AC152579C28B00A923FB /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
+		BFD1AC1B2579F3EB00A923FB /* Top5Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top5Manager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				BFD1AC0F2579C25300A923FB /* CovidManager.swift */,
 				BFD1AC122579C27A00A923FB /* CovidModelo.swift */,
 				BFD1AC152579C28B00A923FB /* CovidData.swift */,
+				BFD1AC1B2579F3EB00A923FB /* Top5Manager.swift */,
 			);
 			path = "Practica 8 (Covid)";
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD1AC1C2579F3EB00A923FB /* Top5Manager.swift in Sources */,
 				BFD1ABFC2579BF6100A923FB /* ViewController.swift in Sources */,
 				BFD1AC162579C28B00A923FB /* CovidData.swift in Sources */,
 				BFD1AC132579C27A00A923FB /* CovidModelo.swift in Sources */,

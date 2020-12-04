@@ -10,20 +10,45 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var BuscarView: UIView!
+    @IBOutlet weak var GlobalView: UIView!
     @IBOutlet weak var BuscarField: UITextField!
+    @IBOutlet weak var CasosGlobalesLabel: UILabel!
+    @IBOutlet weak var TopView: UIView!
+    @IBOutlet weak var Pais1View: UIView!
+    @IBOutlet weak var Pais2View: UIView!
+    @IBOutlet weak var Pais3View: UIView!
+    @IBOutlet weak var Pais4View: UIView!
+    @IBOutlet weak var Pais5View: UIView!
     
     var covidmanager = CovidManager()
+    var topmanager = Top5Manager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         Estilos()
         covidmanager.delegado = self
+        topmanager.delegado = self
         BuscarField.delegate = self
+        topmanager.ObtenerCasos()
     }
     
     func Estilos() {
         BuscarView.backgroundColor = UIColor.gray.withAlphaComponent(0.6)
-        BuscarView.layer.cornerRadius = 20
+        BuscarView.layer.cornerRadius = 10
+        GlobalView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        GlobalView.layer.cornerRadius = 20
+        TopView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        TopView.layer.cornerRadius = 10
+        Pais1View.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        Pais1View.layer.cornerRadius = 10
+        Pais2View.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        Pais2View.layer.cornerRadius = 10
+        Pais3View.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        Pais3View.layer.cornerRadius = 10
+        Pais4View.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        Pais4View.layer.cornerRadius = 10
+        Pais5View.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        Pais5View.layer.cornerRadius = 10
     }
     
 }
@@ -61,13 +86,13 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
-//MARK:- Actualizar
+//MARK:- Actualizar Covid País
 extension ViewController: CovidManagerDelegate {
     func Actualizar(casos: CovidModelo) {
         DispatchQueue.main.async {
-            print("País: \(casos.pais)")
-            print("Bandera \(casos.bandera)")
-            print("Total de casos: \(casos.total_casos)")
+            print("País: \(casos.pais[0])")
+            print("Bandera \(casos.bandera[0])")
+            print("Total de casos: \(casos.total_casos[0])")
         }
     }
     
@@ -79,6 +104,26 @@ extension ViewController: CovidManagerDelegate {
             let aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
             alert.addAction(aceptar)
             self.present(alert, animated: true, completion: nil)
+        }
+    }
+}
+
+//MARK:- Actualizar Covid TOP5
+extension ViewController: Top5ManagerDelegate {
+    func ActualizarTop(casos: CovidModelo) {
+        DispatchQueue.main.async {
+            for p in casos.pais {
+                print(p)
+            }
+            for b in casos.bandera {
+                print(b)
+            }
+            for c in casos.total_casos {
+                print(c)
+            }
+            print(casos.total_casos.sorted())
+            print("TOTAL DE CASOS MUNDIALES: \(casos.TotalGlobal)")
+            self.CasosGlobalesLabel.text = casos.TotalGlobal
         }
     }
 }

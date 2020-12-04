@@ -7,23 +7,17 @@
 
 import Foundation
 
-protocol CovidManagerDelegate {
-    func Actualizar(casos: CovidModelo)
+protocol Top5ManagerDelegate {
+    func ActualizarTop(casos: CovidModelo)
     func Error(error: Error)
 }
 
-struct CovidManager {
-    var delegado: CovidManagerDelegate?
+struct Top5Manager {
+    var delegado: Top5ManagerDelegate?
     let url = "https://corona.lmao.ninja/v3/covid-19/countries"
     
-    func ObtenerCasos(pais: String) {
-        let urls = "\(url)/\(pais)"
-        print(urls)
-        Solicitar(urls: urls)
-    }
-    
-    func Solicitar(urls: String) {
-        if let url = URL(string: urls) {
+    func ObtenerCasos() {
+        if let url = URL(string: url) {
             let session = URLSession(configuration: .default)
             let tarea = session.dataTask(with: url, completionHandler: Handle(data:respuesta:error:))
             tarea.resume()
@@ -37,7 +31,7 @@ struct CovidManager {
         }
         if let datos = data {
             if let casos = self.Decodificar(casos: datos) {
-                delegado?.Actualizar(casos: casos)
+                delegado?.ActualizarTop(casos: casos)
             }
         }
     }
@@ -48,10 +42,12 @@ struct CovidManager {
         var bandera = [String]()
         var total_casos = [Double]()
         do {
-            let decoded = try decoder.decode(CovidData.self, from: casos)
-            pais.append(decoded.country)
-            bandera.append(decoded.countryInfo.flag)
-            total_casos.append(decoded.cases)
+            let decoded = try decoder.decode([CovidData].self, from: casos)
+            for c in decoded {
+                pais.append(c.country)
+                bandera.append(c.countryInfo.flag)
+                total_casos.append(c.cases)
+            }
             let casos = CovidModelo(pais: pais, bandera: bandera, total_casos: total_casos)
             return casos
         }

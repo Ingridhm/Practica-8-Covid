@@ -8,21 +8,21 @@
 import Foundation
 
 struct CovidModelo {
-    let pais: String
-    let bandera: String
-    let total_casos: Int
+    let pais: [String]
+    let bandera: [String]
+    let total_casos: [Double]
     
-    /*var Velocidad: String {
-        return String(format: "%.1f", velocidad)
+    var TotalGlobal: String {
+        var total_global = 0.0
+        for caso in total_casos {
+            total_global = total_global + caso
+        }
+        return String(format: "%.0f", total_global)
     }
     
-    var Direccion: String {
-        if (direccion > 337.5) {
-            return "Norte";
-        }
-        if (direccion > 292.5) {
-            return "Noroeste";
-        }
-        return "Norte"
-    }*/
+    var TopPaises: [String] {
+        var x = total_casos.count
+        var casos = total_casos.sorted()
+        return [String(format: "%.0f", total_casos)]
+    }
 }

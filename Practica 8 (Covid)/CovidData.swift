@@ -10,9 +10,9 @@ import Foundation
 struct CovidData: Codable {
     let country: String
     let countryInfo: CountryInfo
-    let cases: Int
+    let cases: Double
 }
 
-struct CountryInfo: Codable{
+struct CountryInfo: Codable {
     let flag: String
 }
