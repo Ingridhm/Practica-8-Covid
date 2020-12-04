@@ -14,6 +14,9 @@
 		BFD1AC022579BF6100A923FB /* Practica_8__Covid_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD1AC002579BF6100A923FB /* Practica_8__Covid_.xcdatamodeld */; };
 		BFD1AC042579BF6100A923FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD1AC032579BF6100A923FB /* Assets.xcassets */; };
 		BFD1AC072579BF6100A923FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD1AC052579BF6100A923FB /* LaunchScreen.storyboard */; };
+		BFD1AC102579C25300A923FB /* CovidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1AC0F2579C25300A923FB /* CovidManager.swift */; };
+		BFD1AC132579C27A00A923FB /* CovidModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1AC122579C27A00A923FB /* CovidModelo.swift */; };
+		BFD1AC162579C28B00A923FB /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1AC152579C28B00A923FB /* CovidData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		BFD1AC032579BF6100A923FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD1AC062579BF6100A923FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD1AC082579BF6100A923FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD1AC0F2579C25300A923FB /* CovidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidManager.swift; sourceTree = "<group>"; };
+		BFD1AC122579C27A00A923FB /* CovidModelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModelo.swift; sourceTree = "<group>"; };
+		BFD1AC152579C28B00A923FB /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				BFD1AC052579BF6100A923FB /* LaunchScreen.storyboard */,
 				BFD1AC082579BF6100A923FB /* Info.plist */,
 				BFD1AC002579BF6100A923FB /* Practica_8__Covid_.xcdatamodeld */,
+				BFD1AC0F2579C25300A923FB /* CovidManager.swift */,
+				BFD1AC122579C27A00A923FB /* CovidModelo.swift */,
+				BFD1AC152579C28B00A923FB /* CovidData.swift */,
 			);
 			path = "Practica 8 (Covid)";
 			sourceTree = "<group>";
@@ -141,6 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD1ABFC2579BF6100A923FB /* ViewController.swift in Sources */,
+				BFD1AC162579C28B00A923FB /* CovidData.swift in Sources */,
+				BFD1AC132579C27A00A923FB /* CovidModelo.swift in Sources */,
+				BFD1AC102579C25300A923FB /* CovidManager.swift in Sources */,
 				BFD1ABF82579BF6100A923FB /* AppDelegate.swift in Sources */,
 				BFD1ABFA2579BF6100A923FB /* SceneDelegate.swift in Sources */,
 				BFD1AC022579BF6100A923FB /* Practica_8__Covid_.xcdatamodeld in Sources */,
