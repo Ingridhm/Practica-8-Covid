@@ -19,6 +19,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var Pais3View: UIView!
     @IBOutlet weak var Pais4View: UIView!
     @IBOutlet weak var Pais5View: UIView!
+    @IBOutlet weak var Pais1Label: UILabel!
+    @IBOutlet weak var Pais2Label: UILabel!
+    @IBOutlet weak var Pais3Label: UILabel!
+    @IBOutlet weak var Pais4Label: UILabel!
+    @IBOutlet weak var Pais5Label: UILabel!
+    @IBOutlet weak var Pais1Casos: UILabel!
+    @IBOutlet weak var Pais2Casos: UILabel!
+    @IBOutlet weak var Pais3Casos: UILabel!
+    @IBOutlet weak var Pais4Casos: UILabel!
+    @IBOutlet weak var Pais5Casos: UILabel!
+    @IBOutlet weak var Pais1Muertes: UILabel!
+    @IBOutlet weak var Pais2Muertes: UILabel!
+    @IBOutlet weak var Pais3Muertes: UILabel!
+    @IBOutlet weak var Pais4Muertes: UILabel!
+    @IBOutlet weak var Pais5Muertes: UILabel!
+    @IBOutlet weak var Pais1Bandera: UIImageView!
+    @IBOutlet weak var Pais2Bandera: UIImageView!
+    @IBOutlet weak var Pais3Bandera: UIImageView!
+    @IBOutlet weak var Pais4Bandera: UIImageView!
+    @IBOutlet weak var Pais5Bandera: UIImageView!
     
     var covidmanager = CovidManager()
     var topmanager = Top5Manager()
@@ -112,18 +132,45 @@ extension ViewController: CovidManagerDelegate {
 extension ViewController: Top5ManagerDelegate {
     func ActualizarTop(casos: CovidModelo) {
         DispatchQueue.main.async {
-            for p in casos.pais {
-                print(p)
-            }
-            for b in casos.bandera {
-                print(b)
-            }
-            for c in casos.total_casos {
-                print(c)
-            }
-            print(casos.total_casos.sorted())
-            print("TOTAL DE CASOS MUNDIALES: \(casos.TotalGlobal)")
+            //print(casos.total_casos.sorted())
+            //print("TOTAL DE CASOS MUNDIALES: \(casos.TotalGlobal)")
             self.CasosGlobalesLabel.text = casos.TotalGlobal
+            /*for i in casos.TopPaises {
+                print("PAIS: \(casos.pais[i])")
+                print("BANDERA: \(casos.bandera[i])")
+                print("CASOS: \(casos.total_casos[i])")
+                print("MUERTES: \(casos.total_muertes[i])")
+            }*/
+            //PRIMERO
+            var i = casos.TopPaises[0]
+            self.Pais1Label.text = casos.pais[i]
+            self.Pais1Bandera.image = UIImage(data: try! Data(contentsOf: casos.bandera[i]))
+            self.Pais1Casos.text = String(format: "%.0f", casos.total_casos[i])
+            self.Pais1Muertes.text = String(format: "%.0f", casos.total_muertes[i])
+            //SEGUNDO
+            i = casos.TopPaises[1]
+            self.Pais2Label.text = casos.pais[i]
+            self.Pais2Bandera.image = UIImage(data: try! Data(contentsOf: casos.bandera[i]))
+            self.Pais2Casos.text = String(format: "%.0f", casos.total_casos[i])
+            self.Pais2Muertes.text = String(format: "%.0f", casos.total_muertes[i])
+            //TERCERO
+            i = casos.TopPaises[2]
+            self.Pais3Label.text = casos.pais[i]
+            self.Pais3Bandera.image = UIImage(data: try! Data(contentsOf: casos.bandera[i]))
+            self.Pais3Casos.text = String(format: "%.0f", casos.total_casos[i])
+            self.Pais3Muertes.text = String(format: "%.0f", casos.total_muertes[i])
+            //CUARTO
+            i = casos.TopPaises[3]
+            self.Pais4Label.text = casos.pais[i]
+            self.Pais4Bandera.image = UIImage(data: try! Data(contentsOf: casos.bandera[i]))
+            self.Pais4Casos.text = String(format: "%.0f", casos.total_casos[i])
+            self.Pais4Muertes.text = String(format: "%.0f", casos.total_muertes[i])
+            //QUINTO
+            i = casos.TopPaises[4]
+            self.Pais5Label.text = casos.pais[i]
+            self.Pais5Bandera.image = UIImage(data: try! Data(contentsOf: casos.bandera[i]))
+            self.Pais5Casos.text = String(format: "%.0f", casos.total_casos[i])
+            self.Pais5Muertes.text = String(format: "%.0f", casos.total_muertes[i])
         }
     }
 }

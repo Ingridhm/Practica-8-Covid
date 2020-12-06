@@ -541,10 +541,30 @@
                         <outlet property="BuscarView" destination="ocS-dL-2ys" id="SmN-qt-SzN"/>
                         <outlet property="CasosGlobalesLabel" destination="oTZ-qt-cld" id="84Z-nn-cHD"/>
                         <outlet property="GlobalView" destination="7Xl-Un-uiG" id="Nyv-Nl-GF8"/>
+                        <outlet property="Pais1Bandera" destination="7xf-4d-gTv" id="SAz-Bc-9i6"/>
+                        <outlet property="Pais1Casos" destination="8Mq-TW-wqF" id="KIa-rL-rel"/>
+                        <outlet property="Pais1Label" destination="qDl-ze-jPn" id="7mf-3q-99h"/>
+                        <outlet property="Pais1Muertes" destination="jKu-VI-mGW" id="HZb-pO-V6z"/>
                         <outlet property="Pais1View" destination="jsC-J7-8yP" id="c5m-Hk-55H"/>
+                        <outlet property="Pais2Bandera" destination="O0f-v8-cEw" id="LQk-Sj-tvb"/>
+                        <outlet property="Pais2Casos" destination="Z7l-xv-aYx" id="kcJ-rB-YOG"/>
+                        <outlet property="Pais2Label" destination="SEK-0f-oAY" id="qXK-Kq-Jjl"/>
+                        <outlet property="Pais2Muertes" destination="XjF-NW-wBU" id="qQZ-a8-CYC"/>
                         <outlet property="Pais2View" destination="zHO-IS-C7t" id="qdU-Tw-2JE"/>
+                        <outlet property="Pais3Bandera" destination="yyf-85-oTi" id="0MN-6u-kbX"/>
+                        <outlet property="Pais3Casos" destination="n4F-zv-6bI" id="2EJ-YY-Aiz"/>
+                        <outlet property="Pais3Label" destination="Zsa-C1-Cep" id="7uV-NR-q10"/>
+                        <outlet property="Pais3Muertes" destination="Ofd-EB-DKi" id="Qnf-hq-cNI"/>
                         <outlet property="Pais3View" destination="PSj-kD-a0a" id="OQ7-cc-qTE"/>
+                        <outlet property="Pais4Bandera" destination="3ay-kA-dC3" id="CNV-pZ-r26"/>
+                        <outlet property="Pais4Casos" destination="qFJ-Be-xrb" id="Psy-la-S5W"/>
+                        <outlet property="Pais4Label" destination="th3-nI-AFJ" id="Zig-qL-ytp"/>
+                        <outlet property="Pais4Muertes" destination="PDG-4Y-ZV4" id="BLj-4a-E2Z"/>
                         <outlet property="Pais4View" destination="Onf-OM-gyk" id="DEb-65-1rx"/>
+                        <outlet property="Pais5Bandera" destination="S31-9P-jJC" id="Bjf-8L-flz"/>
+                        <outlet property="Pais5Casos" destination="32f-BY-kLG" id="sbp-Ou-69o"/>
+                        <outlet property="Pais5Label" destination="fRB-vu-Rp1" id="5qZ-fr-RUt"/>
+                        <outlet property="Pais5Muertes" destination="ebJ-dY-9bC" id="ADZ-A2-qLW"/>
                         <outlet property="Pais5View" destination="I9f-Qe-on8" id="AGx-Yx-We2"/>
                         <outlet property="TopView" destination="ciy-e1-yPq" id="jxf-fp-RVP"/>
                     </connections>

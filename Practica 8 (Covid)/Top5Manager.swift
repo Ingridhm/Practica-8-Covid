@@ -39,16 +39,18 @@ struct Top5Manager {
     func Decodificar(casos: Data) -> CovidModelo? {
         let decoder = JSONDecoder()
         var pais = [String]()
-        var bandera = [String]()
+        var bandera = [URL]()
         var total_casos = [Double]()
+        var total_muertes = [Double]()
         do {
             let decoded = try decoder.decode([CovidData].self, from: casos)
             for c in decoded {
                 pais.append(c.country)
                 bandera.append(c.countryInfo.flag)
                 total_casos.append(c.cases)
+                total_muertes.append(c.deaths)
             }
-            let casos = CovidModelo(pais: pais, bandera: bandera, total_casos: total_casos)
+            let casos = CovidModelo(pais: pais, bandera: bandera, total_casos: total_casos, total_muertes: total_muertes)
             return casos
         }
         catch {
