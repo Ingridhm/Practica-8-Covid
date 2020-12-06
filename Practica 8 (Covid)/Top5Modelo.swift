@@ -22,25 +22,14 @@ struct Top5Modelo {
     }
     
     var TopPaises: [Int] {
-        var casos = [Double]()
         var i = [Int]()
-        casos = total_casos
-        //PRIMERO
-        i.append(casos.firstIndex(of: casos.max()!)!)
-        casos.remove(at: (casos.firstIndex(of: total_casos[i[0]])!))
-        //SEGUNDO
-        i.append(casos.firstIndex(of: casos.max()!)!)
-        casos.remove(at: (casos.firstIndex(of: total_casos[i[1]])!))
-        //TERCER
-        i.append(casos.firstIndex(of: casos.max()!)!)
-        casos.remove(at: (casos.firstIndex(of: total_casos[i[2]])!))
-        //CUARTO
-        i.append(casos.firstIndex(of: casos.max()!)!)
-        casos.remove(at: (casos.firstIndex(of: total_casos[i[3]])!))
-        print(casos.sorted())
-        //QUINTO
-        i.append(casos.firstIndex(of: casos.max()!)!)
-        //casos.remove(at: (casos.firstIndex(of: total_casos[i[4]])!))
+        var casos = total_casos
+        casos = casos.sorted()
+        i.append(total_casos.firstIndex(of: casos[casos.count-1])!)
+        i.append(total_casos.firstIndex(of: casos[casos.count-2])!)
+        i.append(total_casos.firstIndex(of: casos[casos.count-3])!)
+        i.append(total_casos.firstIndex(of: casos[casos.count-4])!)
+        i.append(total_casos.firstIndex(of: casos[casos.count-5])!)
         return i
     }
 }
