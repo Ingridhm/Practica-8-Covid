@@ -18,6 +18,8 @@
 		BFD1AC132579C27A00A923FB /* CovidModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1AC122579C27A00A923FB /* CovidModelo.swift */; };
 		BFD1AC162579C28B00A923FB /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1AC152579C28B00A923FB /* CovidData.swift */; };
 		BFD1AC1C2579F3EB00A923FB /* Top5Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1AC1B2579F3EB00A923FB /* Top5Manager.swift */; };
+		BFF0D121257C883300FC9BD2 /* Top5Modelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0D120257C883300FC9BD2 /* Top5Modelo.swift */; };
+		BFF0D124257C954F00FC9BD2 /* PaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0D123257C954F00FC9BD2 /* PaisViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		BFD1AC122579C27A00A923FB /* CovidModelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModelo.swift; sourceTree = "<group>"; };
 		BFD1AC152579C28B00A923FB /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
 		BFD1AC1B2579F3EB00A923FB /* Top5Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top5Manager.swift; sourceTree = "<group>"; };
+		BFF0D120257C883300FC9BD2 /* Top5Modelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top5Modelo.swift; sourceTree = "<group>"; };
+		BFF0D123257C954F00FC9BD2 /* PaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				BFD1AC122579C27A00A923FB /* CovidModelo.swift */,
 				BFD1AC152579C28B00A923FB /* CovidData.swift */,
 				BFD1AC1B2579F3EB00A923FB /* Top5Manager.swift */,
+				BFF0D120257C883300FC9BD2 /* Top5Modelo.swift */,
+				BFF0D123257C954F00FC9BD2 /* PaisViewController.swift */,
 			);
 			path = "Practica 8 (Covid)";
 			sourceTree = "<group>";
@@ -159,7 +165,9 @@
 				BFD1AC102579C25300A923FB /* CovidManager.swift in Sources */,
 				BFD1ABF82579BF6100A923FB /* AppDelegate.swift in Sources */,
 				BFD1ABFA2579BF6100A923FB /* SceneDelegate.swift in Sources */,
+				BFF0D121257C883300FC9BD2 /* Top5Modelo.swift in Sources */,
 				BFD1AC022579BF6100A923FB /* Practica_8__Covid_.xcdatamodeld in Sources */,
+				BFF0D124257C954F00FC9BD2 /* PaisViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

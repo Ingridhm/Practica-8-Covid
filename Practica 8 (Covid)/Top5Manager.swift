@@ -8,7 +8,7 @@
 import Foundation
 
 protocol Top5ManagerDelegate {
-    func ActualizarTop(casos: CovidModelo)
+    func ActualizarTop(casos: Top5Modelo)
     func Error(error: Error)
 }
 
@@ -36,7 +36,7 @@ struct Top5Manager {
         }
     }
     
-    func Decodificar(casos: Data) -> CovidModelo? {
+    func Decodificar(casos: Data) -> Top5Modelo? {
         let decoder = JSONDecoder()
         var pais = [String]()
         var bandera = [URL]()
@@ -50,7 +50,7 @@ struct Top5Manager {
                 total_casos.append(c.cases)
                 total_muertes.append(c.deaths)
             }
-            let casos = CovidModelo(pais: pais, bandera: bandera, total_casos: total_casos, total_muertes: total_muertes)
+            let casos = Top5Modelo(pais: pais, bandera: bandera, total_casos: total_casos, total_muertes: total_muertes)
             return casos
         }
         catch {

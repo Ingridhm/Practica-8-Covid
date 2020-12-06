@@ -12,6 +12,13 @@ struct CovidData: Codable {
     let countryInfo: CountryInfo
     let cases: Double
     let deaths: Double
+    let recovered: Double
+    let active: Double
+    let critical: Double
+    let population: Double
+    let todayCases: Double
+    let todayDeaths: Double
+    let todayRecovered: Double
 }
 
 struct CountryInfo: Codable {

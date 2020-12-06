@@ -44,17 +44,20 @@ struct CovidManager {
     
     func Decodificar(casos: Data) -> CovidModelo? {
         let decoder = JSONDecoder()
-        var pais = [String]()
-        var bandera = [URL]()
-        var total_casos = [Double]()
-        var total_muertes = [Double]()
         do {
             let decoded = try decoder.decode(CovidData.self, from: casos)
-            pais.append(decoded.country)
-            bandera.append(decoded.countryInfo.flag)
-            total_casos.append(decoded.cases)
-            total_muertes.append(decoded.deaths)
-            let casos = CovidModelo(pais: pais, bandera: bandera, total_casos: total_casos, total_muertes: total_muertes)
+            let pais = decoded.country
+            let bandera = decoded.countryInfo.flag
+            let total_casos = decoded.cases
+            let total_muertes = decoded.deaths
+            let total_recuperados =  decoded.recovered
+            let total_activos = decoded.active
+            let total_criticos = decoded.critical
+            let total_poblacion = decoded.population
+            let casos_hoy = decoded.todayCases
+            let muertes_hoy = decoded.todayDeaths
+            let recuperados_hoy = decoded.todayRecovered
+            let casos = CovidModelo(pais: pais, bandera: bandera, total_casos: total_casos, total_muertes: total_muertes, total_recuperados: total_recuperados, total_activos: total_activos, total_criticos: total_criticos, total_poblacion: total_poblacion, casos_hoy: casos_hoy, muertes_hoy: muertes_hoy, recuperados_hoy: recuperados_hoy)
             return casos
         }
         catch {
