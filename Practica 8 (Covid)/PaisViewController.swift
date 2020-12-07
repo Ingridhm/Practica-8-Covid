@@ -12,7 +12,9 @@ class PaisViewController: UIViewController {
     @IBOutlet weak var PaisView: UIView!
     @IBOutlet weak var CasosView: UIView!
     @IBOutlet weak var MuertesView: UIView!
+    @IBOutlet weak var HistoricoTitleView: UIView!
     @IBOutlet weak var HistoricoView: UIView!
+    @IBOutlet weak var HoyTitleView: UIView!
     @IBOutlet weak var HoyView: UIView!
     @IBOutlet weak var PaisLabel: UILabel!
     @IBOutlet weak var PoblacionLabel: UILabel!
@@ -38,15 +40,19 @@ class PaisViewController: UIViewController {
     }
     
     func Estilos() {
-        PaisView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
-        PaisView.layer.cornerRadius = 10
-        CasosView.backgroundColor = UIColor.gray.withAlphaComponent(0.9)
+        PaisView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.9)
+        PaisView.layer.cornerRadius = 20
+        CasosView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.9)
         CasosView.layer.cornerRadius = 10
-        MuertesView.backgroundColor = UIColor.gray.withAlphaComponent(0.9)
+        MuertesView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.9)
         MuertesView.layer.cornerRadius = 10
-        HistoricoView.backgroundColor = UIColor.gray.withAlphaComponent(0.9)
+        HistoricoTitleView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.9)
+        HistoricoTitleView.layer.cornerRadius = 10
+        HistoricoView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.9)
         HistoricoView.layer.cornerRadius = 10
-        HoyView.backgroundColor = UIColor.gray.withAlphaComponent(0.9)
+        HoyTitleView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.9)
+        HoyTitleView.layer.cornerRadius = 10
+        HoyView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.9)
         HoyView.layer.cornerRadius = 10
     }
 }
