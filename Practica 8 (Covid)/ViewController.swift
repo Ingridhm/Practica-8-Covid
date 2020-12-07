@@ -46,8 +46,44 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         Estilos()
         topmanager.delegado = self
-        BuscarField.delegate = self
+        //BuscarField.delegate = self
         topmanager.ObtenerCasos()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EnviarPais" {
+            if (BuscarField.text == "") {
+                let alert = UIAlertController(title: "Campo en blanco", message: "Por favor ingrese el nombre de un país", preferredStyle: .alert)
+                let aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+                alert.addAction(aceptar)
+                present(alert, animated: true, completion: nil)
+            }
+            else {
+                let destino = segue.destination as! PaisViewController
+                destino.pais = BuscarField.text
+                BuscarField.text = ""
+            }
+        }
+        if segue.identifier == "EnviarPais1" {
+            let destino = segue.destination as! PaisViewController
+            destino.pais = Pais1Label.text
+        }
+        if segue.identifier == "EnviarPais2" {
+            let destino = segue.destination as! PaisViewController
+            destino.pais = Pais2Label.text
+        }
+        if segue.identifier == "EnviarPais3" {
+            let destino = segue.destination as! PaisViewController
+            destino.pais = Pais3Label.text
+        }
+        if segue.identifier == "EnviarPais4" {
+            let destino = segue.destination as! PaisViewController
+            destino.pais = Pais4Label.text
+        }
+        if segue.identifier == "EnviarPais5" {
+            let destino = segue.destination as! PaisViewController
+            destino.pais = Pais5Label.text
+        }
     }
     
     func Estilos() {
@@ -71,23 +107,7 @@ class ViewController: UIViewController {
 }
 
 //MARK:- BuscarButton
-extension ViewController: UITextFieldDelegate {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "EnviarPais" {
-            if (BuscarField.text == "") {
-                let alert = UIAlertController(title: "Campo en blanco", message: "Por favor ingrese el nombre de un país", preferredStyle: .alert)
-                let aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
-                alert.addAction(aceptar)
-                present(alert, animated: true, completion: nil)
-            }
-            else {
-                let destino = segue.destination as! PaisViewController
-                destino.pais = BuscarField.text
-                BuscarField.text = ""
-            }
-        }
-    }
-    
+/*extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print(BuscarField.text!)
         return true
@@ -102,7 +122,7 @@ extension ViewController: UITextFieldDelegate {
             return false
         }
     }
-}
+}*/
 
 //MARK:- Actualizar Covid TOP5
 extension ViewController: Top5ManagerDelegate {

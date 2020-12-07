@@ -38,7 +38,7 @@ class PaisViewController: UIViewController {
     }
     
     func Estilos() {
-        PaisView.backgroundColor = UIColor.gray.withAlphaComponent(0.9)
+        PaisView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
         PaisView.layer.cornerRadius = 10
         CasosView.backgroundColor = UIColor.gray.withAlphaComponent(0.9)
         CasosView.layer.cornerRadius = 10
@@ -83,6 +83,7 @@ extension PaisViewController: CovidManagerDelegate {
     func Error(error: Error) {
         print(error.localizedDescription)
         DispatchQueue.main.async {
+            //self.dismiss(animated: true, completion: nil)
             let alert = UIAlertController(title: "Pais no encontrado", message: "Por favor verifique que el nombre del pais ingresado sea correcto", preferredStyle: .alert)
             let aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
             alert.addAction(aceptar)
